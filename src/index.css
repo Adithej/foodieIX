@@ -4,3 +4,14 @@
   padding: 0px;
   font-family: Helvetica, sans-serif;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ced8ff;
+  transition: 0.5s;
+}
+
+.container.dark {
+  background-color: #222;
+}
