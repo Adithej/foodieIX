@@ -5,6 +5,12 @@
   font-family: Helvetica, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
