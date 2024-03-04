@@ -1,9 +1,12 @@
+import "./SearchBar.css";
+import searchIconDay from "../assets/search-w.png";
+import searchIconNight from "../assets/search-b.png";
 import { useState } from "react";
 import axios from "axios";
 import conf from "../conf/conf";
 
 // eslint-disable-next-line react/prop-types
-const SearchBar = ({ setData }) => {
+const SearchBar = ({ setData, theme }) => {
   const [term, setTerm] = useState("");
 
   const fetchValue = async (term) => {
@@ -34,11 +37,16 @@ const SearchBar = ({ setData }) => {
   };
 
   return (
-    <div>
+    <div className="search-box">
       <input
+        placeholder="search here"
         type="text"
         value={term}
         onChange={(e) => handleChange(e.target.value)}
+      />
+      <img
+        src={theme === "light" ? searchIconDay : searchIconNight}
+        alt="search icon"
       />
     </div>
   );

@@ -12,6 +12,10 @@ nav {
   transition: 0.5s;
 }
 
+.header ul {
+  color: #f1bc0d;
+}
+
 .dark .header {
   background-color: #000;
   color: #fff;

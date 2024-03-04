@@ -1,0 +1,28 @@
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #242424;
+  max-width: 20%;
+}
+
+.search-box input {
+  padding: 6px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  max-width: 200px;
+}
+
+.search-box input::placeholder {
+  color: #fff;
+}
+
+.search-box img {
+  width: 20px;
+  cursor: pointer;
+}

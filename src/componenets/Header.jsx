@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import "./Header.css";
-import searchIconDay from "../assets/search-w.png";
-import searchIconNight from "../assets/search-b.png";
 import themeLight from "../assets/night.png";
 import themeDark from "../assets/day.png";
 
@@ -50,13 +48,13 @@ const Header = ({ theme, setTheme }) => {
           <li>Features</li>
           <li>About</li>
         </ul>
-        <div className="search-box">
+        {/* <div className="search-box">
           <input type="text" placeholder="search here" />
           <img
             src={theme === "light" ? searchIconDay : searchIconNight}
             alt="search icon"
           />
-        </div>
+        </div> */}
         <img
           onClick={toggleMode}
           src={theme === "light" ? themeLight : themeDark}
