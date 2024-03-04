@@ -1,4 +1,5 @@
 .main-content {
+  min-height: 100vh;
   flex-grow: 1;
   overflow: hidden;
 }

@@ -1,0 +1,55 @@
+.search-results {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #272727;
+  animation: neon-card 2s ease-in-out infinite alternate;
+}
+
+.option-btn {
+  display: flex;
+}
+
+.option-btn button {
+  margin-right: 5px; /* Add spacing between buttons */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 3px; /* Add rounded corners */
+  background-color: #f5f5f5; /* Set background color */
+  cursor: pointer; /* Make the buttons clickable */
+}
+
+.option-btn button:hover {
+  background-color: #ddd; /* Change background color on hover */
+}
+
+.option-btn button.active {
+  /* Style for the active button (optional) */
+  background-color: #ccc; /* Change background color for active button */
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-list li {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer; /* Optional: Style for hover effect */
+}
+
+@keyframes neon-card {
+  from {
+    box-shadow: 0 0 0 2px #f0f, 0 0 5px 4px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 0 2px #0ff, 0 0 5px 4px rgba(0, 255, 255, 0.4);
+  }
+}

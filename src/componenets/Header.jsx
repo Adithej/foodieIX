@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import "./Header.css";
-import themeLight from "../assets/night.png";
+// import themeLight from "../assets/night.png";
 import themeDark from "../assets/day.png";
 
-const Header = ({ theme, setTheme }) => {
+const Header = () => {
   const hideSidebar = () => {
     const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "none";
@@ -14,9 +14,6 @@ const Header = ({ theme, setTheme }) => {
     sidebar.style.display = "flex";
   };
 
-  const toggleMode = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
   return (
     <nav>
       <ul onClick={hideSidebar} className="sidebar">
@@ -56,8 +53,8 @@ const Header = ({ theme, setTheme }) => {
           />
         </div> */}
         <img
-          onClick={toggleMode}
-          src={theme === "light" ? themeLight : themeDark}
+          // onClick={toggleMode}
+          src={themeDark}
           alt="theme"
           className="toggle-icon hideOnMobile"
         />

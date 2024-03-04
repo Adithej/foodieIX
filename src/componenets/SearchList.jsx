@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./SearchList.css";
 const SearchList = ({ data }) => {
   let common = data.common;
   let branded = data.branded;
@@ -14,11 +15,16 @@ const SearchList = ({ data }) => {
   });
 
   return (
-    <div>
-      <h1>Common</h1>
-      {renderedCommon}
-      <h1>branded</h1>
-      {renderedBranded}
+    <div className="search-results">
+      <div className="option-btn">
+        <button>All</button>
+        <button>Common</button>
+        <button>Branded</button>
+      </div>
+      <h4>Common</h4>
+      <div className="result-list">{renderedCommon}</div>
+      <h4>Branded</h4>
+      <div className="result-list">{renderedBranded}</div>
     </div>
   );
 };

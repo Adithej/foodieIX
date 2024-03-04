@@ -1,11 +1,18 @@
 .search-box {
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   border-radius: 50px;
-  background: #242424;
-  max-width: 20%;
+  background: #0d0d0d;
+  max-width: 50%;
+  animation: neon-border 2s ease-in-out;
+  /* background: linear-gradient(0deg, #000, #272727); */
+}
+
+.search-box.focused {
+  animation: neon-border 2s ease-in-out infinite alternate;
 }
 
 .search-box input {
@@ -25,4 +32,13 @@
 .search-box img {
   width: 20px;
   cursor: pointer;
+}
+
+@keyframes neon-border {
+  from {
+    box-shadow: 0 0 0 2px #f0f, 0 0 5px 4px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 0 2px #0ff, 0 0 5px 4px rgba(0, 255, 255, 0.4);
+  }
 }

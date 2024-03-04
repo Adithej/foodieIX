@@ -7,7 +7,11 @@ import conf from "../conf/conf";
 
 // eslint-disable-next-line react/prop-types
 const SearchBar = ({ setData, theme }) => {
+  const [isFocused, setIsFocused] = useState(false); // Track focus state
   const [term, setTerm] = useState("");
+
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
 
   const fetchValue = async (term) => {
     try {
@@ -33,11 +37,19 @@ const SearchBar = ({ setData, theme }) => {
 
   const handleChange = (value) => {
     setTerm(value);
+    if (value === "") {
+      setData([]); // Set data to empty array on clear
+      return; // Early return to avoid unnecessary fetch
+    }
     fetchValue(value);
   };
 
   return (
-    <div className="search-box">
+    <div
+      className={`search-box ${isFocused ? "focused" : ""}`}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+    >
       <input
         placeholder="search here"
         type="text"

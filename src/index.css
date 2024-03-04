@@ -5,20 +5,10 @@
   font-family: Helvetica, sans-serif;
 }
 
-/* body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-} */
-
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ced8ff;
-  transition: 0.5s;
-}
-
-.container.dark {
   background-color: #222;
+  transition: 0.5s;
 }
