@@ -1,6 +1,7 @@
 .search-content {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
