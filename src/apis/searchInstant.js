@@ -7,7 +7,7 @@ export const searchInsatnt = async (term, setData) => {
       "https://trackapi.nutritionix.com/v2/search/instant",
       {
         headers: {
-          "Content-Type": "apllication/json",
+          "Content-Type": "application/json",
           "x-app-id": conf.nutritionAppID,
           "x-app-key": conf.nutritionAppKey,
         },

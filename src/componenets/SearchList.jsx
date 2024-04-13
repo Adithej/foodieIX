@@ -1,20 +1,39 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./SearchList.css";
+import { fetchBrandedItem } from "../apis/fetchBrandedItem";
+import { fetchCommonItem } from "../apis/fetchCommonItem";
 
-const SearchList = ({ data }) => {
+const SearchList = ({ data, setNutrition }) => {
   const [list, setList] = useState(1);
   let common = data.common;
   let branded = data.branded;
-  console.log("branded- ", branded);
+
+  const handleBrandedFetch = (item) => {
+    console.log("item", item);
+    fetchBrandedItem(item, setNutrition);
+  };
+
+  const handleCommonFetch = (item) => {
+    console.log("item ", item);
+    fetchCommonItem(item, setNutrition);
+  };
 
   const renderedCommon = common.slice(0, 10).map((item) => {
     const compositeKey = `${item.tag_id}-${item.food_name}`;
-    return <div key={compositeKey}>{item.food_name}</div>;
+    return (
+      <div onClick={() => handleCommonFetch(item)} key={compositeKey}>
+        {item.food_name}
+      </div>
+    );
   });
 
   const renderedBranded = branded.slice(0, 10).map((item) => {
-    return <div key={item.nix_item_id}>{item.food_name}</div>;
+    return (
+      <div onClick={() => handleBrandedFetch(item)} key={item.nix_item_id}>
+        {item.food_name}
+      </div>
+    );
   });
 
   const renderedList = () => {
