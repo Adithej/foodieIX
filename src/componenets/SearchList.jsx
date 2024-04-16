@@ -4,7 +4,7 @@ import "./SearchList.css";
 import { fetchBrandedItem } from "../apis/fetchBrandedItem";
 import { fetchCommonItem } from "../apis/fetchCommonItem";
 
-const SearchList = ({ data, setNutrition }) => {
+const SearchList = ({ data, setData, setNutrition }) => {
   const [list, setList] = useState(1);
   let common = data.common;
   let branded = data.branded;
@@ -12,11 +12,13 @@ const SearchList = ({ data, setNutrition }) => {
   const handleBrandedFetch = (item) => {
     console.log("item", item);
     fetchBrandedItem(item, setNutrition);
+    setData([]);
   };
 
   const handleCommonFetch = (item) => {
     console.log("item ", item);
     fetchCommonItem(item, setNutrition);
+    setData([]);
   };
 
   const renderedCommon = common.slice(0, 10).map((item) => {

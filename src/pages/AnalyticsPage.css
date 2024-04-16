@@ -1,7 +1,16 @@
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
 .search-content {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+}
+
+.nutrition-content {
+  flex-grow: 2;
 }
