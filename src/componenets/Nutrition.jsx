@@ -1,3 +1,4 @@
+import "./Nutrition.css";
 /* eslint-disable react/prop-types */
 const Nutrition = ({ nutrition }) => {
   // Check if nutrition data exists before accessing it
@@ -18,9 +19,17 @@ const Nutrition = ({ nutrition }) => {
 
   return (
     <div>
-      <h2>Nutrition Facts (per can)</h2>
-      {console.log("pic", food.photo.thumb)}
-      <img src={food.photo.thumb} alt="pic" height="100px" />
+      <div className="nutri-card">
+        <img src={food.photo.thumb} alt="food_name" />
+        <div className="nutri-details">
+          <h2>{food.food_name.toUpperCase()}</h2>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            repellat distinctio aperiam nesciunt iste optio molestias, fugiat
+            animi illum laborum!
+          </p>
+        </div>
+      </div>
       <ul>
         <li>Calories: {calories}</li>
         <li>Sodium: {sodium} mg</li>
