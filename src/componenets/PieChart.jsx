@@ -1,9 +1,22 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Pie } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
 
-const PieChart = ({ foodData }) => {
-  return <Pie data={foodData} />;
+export const PieChart = ({ chartData }) => {
+  return (
+    <div style={{ background: "white" }}>
+      <h2>Pie Chart</h2>
+      <Pie
+        data={chartData}
+        options={{
+          plugins: {
+            title: {
+              display: true,
+              text: "Nutrition",
+            },
+          },
+        }}
+      />
+    </div>
+  );
 };
-
-export default PieChart;

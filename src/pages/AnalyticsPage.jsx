@@ -20,9 +20,11 @@ const AnalyticsPage = () => {
           />
         ) : null}
       </div>
-      <div className="nutrition-content">
-        <Nutrition nutrition={nutrition} />
-      </div>
+      {nutrition.length != 0 ? (
+        <div className="nutrition-content">
+          <Nutrition nutrition={nutrition} />
+        </div>
+      ) : null}
     </div>
   );
 };
