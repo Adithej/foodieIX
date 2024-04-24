@@ -11,4 +11,15 @@ FoodieIX is a project that caters to nutrition information for all possible food
 Users can search for any food item, common or branded the nutrition information is available at your fingertips.
 
 ## Build Using React.js and Chart.js with Vite
-![react2](https://github.com/Adithej/foodieIX/assets/32978688/78714985-7f60-4797-a9d7-4ae6f02b6720)  ![cahrtjs](https://github.com/Adithej/foodieIX/assets/32978688/b3801b08-7585-4c4b-8922-a81ef2171ae0)
+![react23](https://github.com/Adithej/foodieIX/assets/32978688/72de5acf-f017-4550-9df9-75ddcecaf585) ![cahrtjs](https://github.com/Adithej/foodieIX/assets/32978688/b3801b08-7585-4c4b-8922-a81ef2171ae0)
+
+# Getting started
+
+```bash
+add the dependencies: npm install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
