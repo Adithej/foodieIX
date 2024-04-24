@@ -9,6 +9,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #222;
+  background-color: rgb(19, 19, 20);
   transition: 0.5s;
 }

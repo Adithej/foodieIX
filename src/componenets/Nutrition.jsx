@@ -12,8 +12,7 @@ const Nutrition = ({ nutrition }) => {
   const [isloading, setIsloading] = useState(true);
   const [item, setItem] = useState([]);
   const [chartData, setChartData] = useState(null);
-
-  console.log("nf_calories:", item.nf_calories);
+  const [quantity, setQuantity] = useState(0);
 
   const Data = [
     {
@@ -85,7 +84,6 @@ const Nutrition = ({ nutrition }) => {
   console.log("item - ", item);
 
   useEffect(() => {
-    // Update chart data whenever item changes
     const newData = {
       labels: Data.map((data) => data.label),
       datasets: [
@@ -97,9 +95,16 @@ const Nutrition = ({ nutrition }) => {
             "#50AF95",
             "#f3ba2f",
             "#2a71d0",
+            "#FFC0CB ",
+            "#D291BD",
+            "#A0D6E8",
+            "#F7CA1F",
+            "#A2A2A2",
+            "#90EE90",
+            "#FFA500",
           ],
           borderColor: "black",
-          borderWidth: 2,
+          borderWidth: 1,
         },
       ],
     };
@@ -107,24 +112,63 @@ const Nutrition = ({ nutrition }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item]);
 
+  function increment() {
+    setQuantity((prev) => {
+      if (prev < 6) {
+        return (prev += 1);
+      } else {
+        return 0;
+      }
+    });
+  }
+
+  function decrement() {
+    setQuantity((prev) => {
+      if (prev > 0) {
+        return (prev -= 1);
+      } else {
+        return 0;
+      }
+    });
+  }
+
   return (
     <div>
       {isloading ? (
         <div>Loading.... </div>
       ) : (
-        <div>
+        <div className="nutri-data">
           <div className="nutri-card">
-            <img src={item.photo.thumb} alt="food_name" />
+            <img src={item?.photo.thumb} alt="food_name" />
             <div className="nutri-details">
-              <h2>{item.food_name.toUpperCase()}</h2>
-              <p id="info">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Numquam ad possimus reprehenderit, unde officiis laboriosam
-                eveniet architecto consequuntur quae corrupti?
-              </p>
+              <h2>{item?.food_name.toUpperCase()}</h2>
+              <div className="nutri-btn">
+                <button onClick={increment}>+</button>
+                <button onClick={decrement}>-</button>
+                <p>
+                  Measure -{" "}
+                  {item.alt_measures
+                    ? item.alt_measures[quantity].measure
+                    : "No measure available"}
+                </p>
+                <p>
+                  Quantity -{" "}
+                  {item.alt_measures
+                    ? item.alt_measures[quantity].qty
+                    : "No quantity available"}
+                </p>
+                <p>
+                  Seving Weight -{" "}
+                  {item.alt_measures
+                    ? item.alt_measures[quantity].serving_weight
+                    : "No serving weight available"}
+                </p>
+              </div>
             </div>
           </div>
-          <PieChart chartData={chartData} />
+          <div className="nutri-chart">
+            <PieChart chartData={chartData} />
+          </div>
         </div>
       )}
     </div>

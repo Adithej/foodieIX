@@ -1,6 +1,12 @@
+.nutri-data {
+  display: flex;
+  gap: 1rem;
+}
 .nutri-card {
+  background-color: #000;
+  color: rgb(196, 199, 197);
   margin-top: 20px;
-  width: 350px;
+  width: 400px;
   height: 450px;
   display: flex;
   flex-direction: column;
@@ -9,6 +15,7 @@
   padding: 50px;
   border-radius: 10px;
   overflow: hidden;
+  scrollbar-width: none;
   box-shadow: rgba(78, 78, 119, 0.25) 0px 6px 12px -2px,
     rgba(122, 121, 121, 0.3) 0px 3px 7px -3px;
 }
@@ -31,4 +38,40 @@
 .nutri-card .nuti-details p {
   text-transform: uppercase;
   font-weight: 300;
+}
+
+.nutri-chart {
+  background-color: #000;
+  color: rgb(244, 253, 247);
+  cursor: pointer;
+  margin-top: 20px;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(78, 78, 119, 0.25) 0px 6px 12px -2px,
+    rgba(122, 121, 121, 0.3) 0px 3px 7px -3px;
+}
+
+.nutri-btn button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  border: 5px solid #272727;
+  background-color: #0d0d0d;
+  color: rgb(196, 199, 197); /* Set background color */
+  cursor: pointer; /* Make the buttons clickable */
+}
+
+.nutri-btn button:hover {
+  background-color: #ddd; /
+}
+
+.nutri-btn button.active {
+  background-color: #ccc;
 }

@@ -1,6 +1,10 @@
-# React + Vite
+# FoodieIX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## natural language for all food
+
+FoodieIX is a project meant to cater the nutrition information for all possible food items.
+
+Users can search any food item, common or branded the nutrition information is available at your finger tips.
 
 Currently, two official plugins are available:
 
