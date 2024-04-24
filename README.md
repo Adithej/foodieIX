@@ -12,7 +12,8 @@ Users can search for any food item, common or branded the nutrition information 
 
 ## Build Using React.js and Chart.js with Vite
 
-![react2](https://github.com/Adithej/foodieIX/assets/32978688/36c15df1-6f5f-4e14-bcb5-63dbcd05b303)
+![react](https://github.com/Adithej/foodieIX/assets/32978688/1561ad53-b8c3-4585-b385-88bb7ba4a367)
+
 
 ![cahrtjs](https://github.com/Adithej/foodieIX/assets/32978688/b3801b08-7585-4c4b-8922-a81ef2171ae0)
 
